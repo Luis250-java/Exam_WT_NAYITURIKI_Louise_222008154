@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets adoption form</title>
+    <style>
+        body {
+            background-color: skyblue; /* skyblue background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add other CSS styles here */
+        .container {
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<center>
+    <h2>Volunteer Registration</h2>
+    <form action="volunteerform.php" method="POST">
+        <label for="volunteer_id">Volunteer_id:</label><br>
+        <input type="number" id="volunteer_id" name="volunteer_id" required><br>
+
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br>
+        
+        <label for="phone_number">Phone_number:</label><br>
+        <input type="id" id="phone_number" name="phone_number" required><br>
+        
+        <label for="interests">Interests:</label><br>
+        <textarea id="interests" name="interests" rows="4" cols="50"></textarea><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

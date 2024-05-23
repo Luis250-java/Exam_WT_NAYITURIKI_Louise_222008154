@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Adoption Platform</title>
+    <style>
+        body {
+            background-color: sandybrown;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: teal;
+            border-bottom: 5px solid black;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: none;
+            flex-grow: 2; 
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: black; /* set color to black */
+        }
+        .dropdown-contents {
+            display: none;
+            position: absolute;
+            background-color: none;
+            text-decoration: none;
+        }
+        .dropdown-contents a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-contents a:hover {
+            background-color: red;
+        }
+        .dropdown:hover .dropdown-contents {
+            display: block;
+        }
+        .welcome-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        .platform-features {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .platform-features ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 50px; /* Added margin-left to create space between text and image */
+        }
+        .platform-features li {
+            margin-bottom: 10px;
+        }
+        .platform-features img {
+            max-width: 300px; /* Adjusted maximum width of the image */
+            height: auto;
+        }
+                }
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #8a2be2;
+        }
+        /* Login button styling */
+        .login-button {
+            display: inline-block;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        .login-button:hover {
+            background-color: #00008b;
+        }
+    
+    </style>
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="http://localhost/webexam/images/my pets.jpg" alt="Logo">
+    <h3 style="color: white;"><i>PETS ADOPTION PLATFORM</i></h3>
+    <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li class="dropdown">
+           <a href="#">Forms</a>
+            <div class="dropdown-contents">
+                <a href="userregister.html">Register form</a>
+                <a href="applicationform.html">application form</a>
+                <a href="volunteerform.html">Volunteer form</a>
+                <a href="petsform.html">Pets form</a>
+                <a href="donors.html">Donation form</a>
+                <a href="event.html">Events form</a>
+                <a href="medicalrecords.html">Medical records form</a>
+                <a href="shelters.html">Shelters form</a>
+                <a href="lostandfound.html">Lost and founds form</a>
+                <a href="event.html">Events form</a>
+                <a href="review.html">review form</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Tables</a>
+            <div class="dropdown-contents">
+                <a href="userstable.php">Users table </a>
+                <a href="petstable.php">Pets table </a>
+                <a href="lostandfoundtable.php">Lost and found </a>
+                <a href="donationstable.php">Donations table</a>
+                <a href="shelterstable.php">Shelters table</a>
+                <a href="volunteerstable.php">Vplunteers table</a>
+                <a href="reviewstable.php">Reviews table</a>
+                <a href="eventstable.php">Events table</a>
+                <a href="medicalrecordstable.php">medical recods table</a>
+                <a href="adoptionapplicationtable.php">Adoption applicants table</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Settings</a>
+            <div class="dropdown-contents">
+                <a href="login.html">user login</a>
+                <a href="adminlogin.html">Admin login</a>
+                <a href="userregister.html">user registration</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    // JavaScript for navigation bar dropdown menu
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+    }
+</script>
+<center>
+    <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+  </ul>
+
+</header>
+<section>
+
+	<h2 style="margin-top: 50px;"><bold><u>CONTACT US</u></bold></h2>
+<ul></ul>
+  <li>Address: 125 Main Street, Kacyiru, Rwanda</li>
+  <li>Phone: +250 788826227</li>
+  <li>Email: info@adopets.com</li>
+</ul>
+
+<form action="login.php" method="post" style="background-color: white; width: 500px; height: 200px; margin-top: 50px;">
+  <label for="name">Names:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="phone">Telephone:</label><br>
+  <input type="tel" id="phone" name="phone"><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea>
+
+  <input type="submit" value="send">
+</form>
+<p>Connect with us on social media or social networkings:
+
+  <a href="https://www.twitter.com/adopets">Twitter</a>
+  <a href="https://www.facebook.com/adopets">Facebook</a>
+  <a href="https://www.instagram.com/adopets">Instagram</a>
+  <a href="https://www.whatsapp.com/adopets">Whatsapp</a>
+</p>
+</section>
+<center>
+    <button style="background-color: indigo; width: 150px;height: 40px;" ><a href="home.html" style=" font-size: 15px;color: white;text-decoration: none" >Back Home</a></button>
+</center>
+<footer>
+  <center> 
+   <marquee><h1 style="color: black;">UR CBE BIT &copy, 2024 &sams, Designed by: @Louise NAYITURIKI</h1></marquee>
+  </center>
+</footer>
+
+</body>
+</html>
+

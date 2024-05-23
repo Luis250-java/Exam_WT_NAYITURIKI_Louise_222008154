@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Adoption Application</title>
+</head>
+<body>
+    <?php
+    // Database configuration
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "Adopets database";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Check if application_id is set
+    if (isset($_REQUEST['id'])) {
+        $application_id = $_REQUEST['id'];
+
+        // Prepare and execute SELECT statement to retrieve application details
+        $stmt = $conn->prepare("SELECT * FROM adoption_applications WHERE application_id = ?");
+        $stmt->bind_param("i", $application_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $application_id = $row['application_id'];
+            $full_name = $row['full_name'];
+            $email = $row['email'];
+            $phone_number = $row['phone_number'];
+            $address = $row['address'];
+            $pet_name = $row['pet_name'];
+            $reason_for_adoption = $row['reason_for_adoption'];
+            $submission_date = $row['submission_date'];
+        } else {
+            echo "Application not found.";
+            exit(); // Exit if the application is not found
+        }
+    }
+
+    // Close the statement
+    $stmt->close();
+    ?>
+
+    <h2>Update Adoption Application</h2>
+    <form method="POST">
+        <label for="application_id">Application ID:</label>
+        <input type="number" name="application_id" value="<?php echo isset($application_id) ? $application_id : ''; ?>" readonly>
+
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" value="<?php echo isset($full_name) ? $full_name : ''; ?>">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="<?php echo isset($email) ? $email : ''; ?>">
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" value="<?php echo isset($phone_number) ? $phone_number : ''; ?>">
+
+        <label for="address">Address:</label>
+        <textarea name="address" rows="4" cols="50"><?php echo isset($address) ? $address : ''; ?></textarea>
+
+        <label for="pet_name">Pet Name:</label>
+        <input type="text" name="pet_name" value="<?php echo isset($pet_name) ? $pet_name : ''; ?>">
+
+        <label for="reason_for_adoption">Reason for Adoption:</label>
+        <textarea name="reason_for_adoption" rows="4" cols="50"><?php echo isset($reason_for_adoption) ? $reason_for_adoption : ''; ?></textarea>
+
+        <label for="submission_date">Submission Date:</label>
+        <input type="date" name="submission_date" value="<?php echo isset($submission_date) ? $submission_date : ''; ?>">
+        <br><br>
+
+        <input type="submit" name="update" value="Update">
+        <input type="reset" name="cancel" value="Cancel">
+    </form>
+
+    <?php
+    // Check if update button is clicked
+    if (isset($_POST['update'])) {
+        // Retrieve updated values from form
+        $application_id = $_POST['application_id'];
+        $full_name = $_POST['full_name'];
+        $email = $_POST['email'];
+        $phone_number = $_POST['phone_number'];
+        $address = $_POST['address'];
+        $pet_name = $_POST['pet_name'];
+        $reason_for_adoption = $_POST['reason_for_adoption'];
+        $submission_date = $_POST['submission_date'];
+
+        // Prepare and execute UPDATE statement
+        $stmt = $conn->prepare("UPDATE adoption_applications SET full_name=?, email=?, phone_number=?, address=?, pet_name=?, reason_for_adoption=?, submission_date=? WHERE application_id=?");
+        $stmt->bind_param("sssssssi", $full_name, $email, $phone_number, $address, $pet_name, $reason_for_adoption, $submission_date, $application_id);
+
+        if ($stmt->execute()) {
+            // Redirect to adoption_application_records.php after successful update
+            header('Location: adoption_application_records.php');
+            exit(); // Ensure that no other content is sent after the header redirection
+        } else {
+            echo "Error updating application details: " . $stmt->error;
+        }
+    }
+    ?>
+
+</body>
+</html>
+
+<?php
+// Close the database connection
+$conn->close();
+?>

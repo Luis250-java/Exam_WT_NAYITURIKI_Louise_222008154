@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets application adoption form</title>
+    <style>
+        body {
+            background-color: lightpink; /* skyblue background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add other CSS styles here */
+        .container {
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<center>
+<h2>Pet Adoption Application Form</h2>
+
+<form action="submitapplication.php" method="post">
+    <label for="application_id">Application ID:</label><br>
+    <input type="number" id="application_id" name="application_id" required><br><br>
+
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="pet_name">Pet Name:</label><br>
+    <input type="text" id="pet_name" name="pet_name" required><br><br>
+
+    <label for="reason_for_adoption">Why do you want to adopt this pet?</label><br>
+    <textarea id="reason_for_adoption" name="reason_for_adoption" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="submission_date">Submission_date:</label><br>
+    <input type="date" id="submission_date" name="submission_date" required><br><br>
+
+    <input type="submit" value="Submit Application">
+</form>
+</center>
+</body>
+</html>

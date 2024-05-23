@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Adoption Platform</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: teal;
+            border-bottom: 5px solid black;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: none;
+            flex-grow: 2; 
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: black; /* set color to black */
+        }
+        .dropdown-contents {
+            display: none;
+            position: absolute;
+            background-color: none;
+            text-decoration: none;
+        }
+        .dropdown-contents a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-contents a:hover {
+            background-color: red;
+        }
+        .dropdown:hover .dropdown-contents {
+            display: block;
+        }
+        .welcome-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        .platform-features {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .platform-features ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 50px; /* Added margin-left to create space between text and image */
+            margin-right: 50px; /* Added margin-left to create space between text and image */
+        }
+        .platform-features li {
+            margin-bottom: 10px;
+        }
+        .platform-features img {
+            max-width: 300px; /* Adjusted maximum width of the image */
+            height: auto;
+        }
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #8a2be2;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="http://localhost/webexam/images/my pets.jpg" alt="Logo">
+    <h3 style="color: white;"><i>PETS ADOPTION PLATFORM</i></h3>
+    <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li class="dropdown">
+           <a href="#">Forms</a>
+            <div class="dropdown-contents">
+                <a href="userregister.html">Register form</a>
+                <a href="applicationform.html">application form</a>
+                <a href="adminform.html">Admin form</a>
+                <a href="volunteerform.html">Volunteer form</a>
+                <a href="petsform.html">Pets form</a>
+                <a href="donors.html">Donation form</a>
+                <a href="event.html">Events form</a>
+                <a href="medicalrecords.html">Medical records form</a>
+                <a href="shelters.html">Shelters form</a>
+                <a href="lostandfound.html">Lost and founds form</a>
+                <a href="event.html">Events form</a>
+                <a href="review.html">review form</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Tables</a>
+            <div class="dropdown-contents">
+                <a href="userstable.php">Users table </a>
+                <a href="adminstable.php">Admins table </a>
+                <a href="petstable.php">Pets table </a>
+                <a href="lostandfoundtable.php">Lost and found </a>
+                <a href="donationstable.php">Donations table</a>
+                <a href="shelterstable.php">Shelters table</a>
+                <a href="volunteerstable.php">Volunteers table</a>
+                <a href="reviewstable.php">Reviews table</a>
+                <a href="eventstable.php">Events table</a>
+                <a href="medicalrecordstable.php">medical recods table</a>
+                <a href="adoptionapplicantstable.php">Adoption applicants table</a>
+            </div>
+                    <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+
+        </li>
+        <li class="dropdown">
+            <a href="#">Settings</a>
+            <div class="dropdown-contents">
+                <a href="login.html">user login</a>
+                <a href="adminlogin.html">Admin login</a>
+                <a href="userregister.html">user registration</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div style="margin-left: 500px;"><form action="petsearch.php" method="GET">
+      <input type="search" name="query" placeholder="Search here">&nbsp;&nbsp;&nbsp;<button type="submit" style="background-color: blue;width: 100px;">Search</button>
+    </form></div>
+
+<div class="welcome-message">
+    <marquee><h1>Welcome to the Pet Adoption Platform Website!</h1></marquee>
+    <h2>Find your new furry friend today.</h2>
+</div>
+
+<div class="platform-features">
+    <img src="http://localhost/webexam/images/my%20pets.jpg" alt="My Pets">
+    <ul>
+        <li>.Search and browse pets available for adoption</li>
+        <li>.Submit adoption applications for pets</li>
+        <li>.Host and discover pet adoption events</li>
+        <li>.Connect with shelters and rescue organizations</li>
+        <li>.Leave reviews and ratings for pets and shelters</li>
+    </ul>
+    <img src="http://localhost/webexam/images/cats.jpg" alt="cats">
+</div>
+
+<center>
+    <a href="availablepets.html" class="button">View available pets</a>
+</center>
+<footer style="background-color: teal; text-align: center; width: 100%; height: 90px; color: white; font-size: 25px; margin-top: 20px; bottom: 0; left: 0;">
+    <p>Designed by Louise NAYITURIKI_222008154 &copy; YEAR TWO BIT GROUP A &reg; 2024</p>
+</footer>
+</body>
+</html>

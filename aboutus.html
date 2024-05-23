@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Adoption Platform</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: teal;
+            border-bottom: 5px solid black;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: none;
+            flex-grow: 2; 
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: black; /* set color to black */
+        }
+        .dropdown-contents {
+            display: none;
+            position: absolute;
+            background-color: none;
+            text-decoration: none;
+        }
+        .dropdown-contents a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-contents a:hover {
+            background-color: red;
+        }
+        .dropdown:hover .dropdown-contents {
+            display: block;
+        }
+        .welcome-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        .platform-features {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .platform-features ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 50px; /* Added margin-left to create space between text and image */
+            margin-right: 50px; /* Added margin-left to create space between text and image */
+        }
+        .platform-features li {
+            margin-bottom: 10px;
+        }
+        .platform-features img {
+            max-width: 300px; /* Adjusted maximum width of the image */
+            height: auto;
+        }
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #8a2be2;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="http://localhost/webexam/images/my pets.jpg" alt="Logo">
+    <h3 style="color: white;"><i>PETS ADOPTION PLATFORM</i></h3>
+    <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li class="dropdown">
+           <a href="#">Forms</a>
+            <div class="dropdown-contents">
+                <a href="userregister.html">Register form</a>
+                <a href="applicationform.html">application form</a>
+                <a href="adminform.html">Admin form</a>
+                <a href="volunteerform.html">Volunteer form</a>
+                <a href="petsform.html">Pets form</a>
+                <a href="donors.html">Donation form</a>
+                <a href="event.html">Events form</a>
+                <a href="medicalrecords.html">Medical records form</a>
+                <a href="shelters.html">Shelters form</a>
+                <a href="lostandfound.html">Lost and founds form</a>
+                <a href="event.html">Events form</a>
+                <a href="review.html">review form</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Tables</a>
+            <div class="dropdown-contents">
+                <a href="userstable.php">Users table </a>
+                <a href="adminstable.php">Admins table </a>
+                <a href="petstable.php">Pets table </a>
+                <a href="lostandfoundtable.php">Lost and found </a>
+                <a href="donationstable.php">Donations table</a>
+                <a href="shelterstable.php">Shelters table</a>
+                <a href="volunteerstable.php">Vplunteers table</a>
+                <a href="reviewstable.php">Reviews table</a>
+                <a href="eventstable.php">Events table</a>
+                <a href="medicalrecordstable.php">medical recods table</a>
+                <a href="adoptionapplicationtable.php">Adoption applicants table</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Settings</a>
+            <div class="dropdown-contents">
+                <a href="login.html">user login</a>
+                <a href="adminlogin.html">Admin login</a>
+                <a href="userregister.html">user registration</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    // JavaScript for navigation bar dropdown menu
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+    }
+</script>
+<center>
+    <div style="margin-left: 500px;"><form action="search.php" method="GET">
+      <input type="search" name="query" placeholder="search here">&nbsp;&nbsp;&nbsp;<button type="submit" style="background-color: lightpink;width: 100px;">search</button>
+    </form></div>
+</form>
+</center> 
+  </ul>
+
+</header>
+<section>
+    <center>
+<marquee><h1>WELCOME TO PETS ADOPTION PLATFORM</h1></marquee>
+<div style="background-color: lightgreen;"><p style="color: blue;font-size: 20px; font-weight: bold;">
+
+<h2 style="color: blue;"><bold><u>ABOUTS PETS ADOPTION PLATFORM:</u></bold></h2>
+
+<p>The Pets Adoption Platform is a comprehensive online platform dedicated to connecting animals in need of homes with caring individuals and families.</p>
+<p> Through our platform, users can browse through a wide variety of pets available for adoption, including dogs, cats, rabbits, and more.</p>
+
+<p>We provide a seamless adoption process, allowing users to submit adoption applications, connect with shelters and rescue organizations, and even participate in pet adoption events hosted through our platform.</p>
+
+<p>Our mission is to facilitate the adoption process, promote responsible pet ownership, and ultimately provide loving forever homes for animals in need.</p>
+<p> Join us in making a difference in the lives of pets and their future families.</p><br>
+
+<h2 style="color: blue;"><bold><u> WHAT DO WE DO</u></bold></h2>
+
+<p>At Pets Adoption Platform, we provide a comprehensive online platform dedicated to connecting animals in need of homes with caring individuals and families.</p>
+<p>Our platform facilitates the adoption process by offering a wide range of services, including browsing available pets, submitting adoption applications,</p>
+<p>connecting with shelters and rescue organizations, and participating in pet adoption events.</p><br>
+
+<h2 style="color: blue;"><bold><u>OUR VISION:</u></bold></h2>
+<p>Our vision is to create a world where every animal has a loving and permanent home.</p>
+<p> We aspire to be the leading online platform for pet adoption, promoting responsible pet ownership and compassion towards animals.</p>
+
+<h2 style="color: blue;"><bold><u>OUR VISION:</u></bold></h2>
+<p>Our mission is to facilitate the adoption process, promote responsible pet ownership, and ultimately provide loving forever homes for animals in need.</p>
+<p> We aim to achieve this by leveraging technology to connect shelters, rescue organizations, and potential adopters, making the adoption process seamless and accessible to all.</p>
+
+<h2 style="color: blue;"><bold><u>OUR OBJECTIVES:</u></bold></h2>
+
+<p>Increase Adoption Rates: Our primary objective is to increase the adoption rates of animals in shelters and rescue organizations by providing a user-friendly platform for potential adopters to find their perfect pet match.</p>
+
+<p>Promote Responsible Pet Ownership: We strive to educate the public about the responsibilities of pet ownership, including proper care, training, and veterinary care, to ensure the well-being of adopted pets.</p>
+
+<p>Support Animal Welfare Organizations: We aim to support animal welfare organizations by providing them with a platform to showcase their animals available for adoption, organize adoption events, and receive donations to support their operations.</p>
+
+<p>Foster Compassion and Empathy: Through our platform, we seek to foster a culture of compassion and empathy towards animals, encouraging individuals and families to open their hearts and homes to pets in need.</p><br>
+
+<p>Join us in our mission to make a difference in the lives of animals and create a world where every pet has a loving and permanent home</p><br>
+
+    <h2 style="color: blue;">Our Team</h2>
+    <div style="background-color: violet;">
+    <p >Meet the faces behind our company:</p>
+    <ul>
+      <li><strong>LOUISE NAYITURIKI</strong> - CEO</li>
+      <li><strong>ANNICK MUNYANA</strong> - Marketing Director</li>
+      <li><strong>JAMES HIRWA</strong> - Head of Operations</li>
+      <!-- Add more team members as needed -->
+    </ul></div>
+        <h2>Our History</h2>
+    <p>our company was founded in 01/08/2022 by friends company ltd. Since then, we have been committed to brief history of your company, milestones.</p>
+    
+    <div style="background-color: purple;"><h2 style="color: orange;">Our Milestones</h2>
+    <p>Over the years, we've achieved several milestones:</p>
+    <ul>
+      <li><strong>05/Agust/2023</strong> - Founded the company with a small team of web designer friends.</li>
+      <li><strong>25/December/2023</strong> - Launched our first major production event called IMPROVE ONLINE PETS ADOPTION.</li>
+      <li><strong>20/January/2024</strong> - Expanded our services to include we make upgrading our system by adding new menus like Login and sing up .</li>
+      <!-- Add more milestones as needed -->
+    </ul></div>
+  
+  
+  </div>
+    <!-- Flash Card -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4"> <!-- Each column takes up 4 units on medium-sized screens and above -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+</section>
+<footer>
+  <center> 
+  </center>
+</footer>
+</div>
+</center>
+<!-- We are here for you!!!!-->
+<center>
+    <button style="background-color: indigo; width: 150px;height: 40px;" ><a href="contactus.html" style=" font-size: 15px;color: white;text-decoration: none" >For more info</a></button>
+
+    <button style="background-color: darkgreen; width: 150px;height: 40px;" ><a href="home.html" style=" font-size: 15px;color: white;text-decoration: none" >Back Home</a></button>
+</center>
+</body>
+</html>

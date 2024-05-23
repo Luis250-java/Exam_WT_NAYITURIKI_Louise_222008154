@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets adoption form</title>
+    <style>
+        body {
+            background-color: skyblue; /* skyblue background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add other CSS styles here */
+        .container {
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h2>Report Lost or Found Pet</h2>
+            <form action="lostandfound.php" method="POST">
+
+                <label for="report_id">Report ID:</label><br>
+                <input type="number" id="report_id" name="report_id" required><br>
+
+                <label for="pet_description">Pet Description:</label><br>
+                <textarea id="pet_description" name="pet_description" required></textarea><br>
+                
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" required><br>
+                
+                <label for="report_date">Report Date:</label><br>
+                <input type="datetime-local" id="report_date" name="report_date" required><br>
+                
+                <label for="contact_details">Contact Details:</label><br>
+                <input type="text" id="contact_details" name="contact_details" required><br>
+                
+                <label for="status">Status:</label><br>
+                <select id="status" name="status" required>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+                </select><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

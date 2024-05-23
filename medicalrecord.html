@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records Form</title>
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 40%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Add Medical Record</h2>
+    <form action="medicalrecord.php" method="POST">
+        <label for="pet_id">Pet ID:</label><br>
+        <input type="number" id="pet_id" name="pet_id" required><br>
+
+        <label for="vaccination_records">Vaccination Records:</label><br>
+        <textarea id="vaccination_records" name="vaccination_records" rows="4" cols="50"></textarea><br>
+
+        <label for="spaying_neutering_status">Spaying/Neutering Status:</label><br>
+        <select id="spaying_neutering_status" name="spaying_neutering_status" required>
+            <option value="Spayed">Spayed</option>
+            <option value="Neutered">Neutered</option>
+            <option value="Not applicable">Not Applicable</option>
+        </select><br>
+
+        <label for="microchip_information">Microchip Information:</label><br>
+        <input type="text" id="microchip_information" name="microchip_information"><br>
+
+        <label for="medical_conditions">Medical Conditions:</label><br>
+        <textarea id="medical_conditions" name="medical_conditions" rows="4" cols="50"></textarea><br>
+
+        <label for="medications">Medications:</label><br>
+        <textarea id="medications" name="medications" rows="4" cols="50"></textarea><br>
+
+        <label for="veterinary_visits">Veterinary Visits:</label><br>
+        <textarea id="veterinary_visits" name="veterinary_visits" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
